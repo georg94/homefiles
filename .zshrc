@@ -34,7 +34,11 @@ setopt prompt_subst
 
 fg[lightgreen]=$'\e[1;32m'
 fg[lightblue]=$'\e[1;34m'
-PROMPT="%{$fg[lightgreen]%}%n@%m %{$fg[lightblue]%}%~ %{$reset_color%}"$'\n'"%# "
+fg[lightred]=$'\e[1;31m'
+
+[[ $USER = "root" ]] && user_color="lightred" || user_color="lightgreen"
+
+PROMPT="%{$fg[$user_color]%}%n@%m %{$fg[lightblue]%}%~ %{$reset_color%}"$'\n'"%# "
 RPROMPT='${vcs_info_msg_0_}'
 
 ##
