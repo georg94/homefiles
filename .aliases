@@ -28,3 +28,10 @@ alias kh='vim ~/.ssh/known_hosts'
 
 alias pp='python -mjson.tool'
 alias pw='pwgen -s -c 15'
+
+##
+# git aliases
+##
+
+alias g='git'
+alias gti='git'
